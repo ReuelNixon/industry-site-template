@@ -1,0 +1,11 @@
+---
+let { href, lineColor, tClass } = Astro.props;
+if (lineColor == undefined) lineColor = "#5a664f";
+---
+
+<a
+	href={href}
+	class=`text-[black] bg-[linear-gradient(to_bottom,transparent_65%,#5a664f_0)] bg-[percentage:0%_100%] bg-no-repeat no-underline transition-[background-size] duration-[0.4s] ease-[ease] hover:bg-[percentage:100%_100%] hover:cursor-pointer  ${tClass}`
+>
+	<slot />
+</a>
