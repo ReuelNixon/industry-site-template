@@ -1,0 +1,470 @@
+---
+import { Icon } from "astro-icon";
+import Link from "./Link.component.astro";
+---
+
+<header id="nav-menu" aria-label="navigation bar" class="bg-[#e9edc9]">
+	<div class="container1">
+		<div class="nav-start">
+			<a class="logo" href="/">
+				<img
+					src="/public/images/logo.png"
+					width="35"
+					height="35"
+					alt="Inc Logo"
+				/>
+			</a>
+		</div>
+
+		<div class="nav-end">
+			<nav class="menu">
+				<ul class="menu-bar">
+					<li>
+						<button
+							class="nav-link dropdown-btn"
+							data-dropdown="dropdown1"
+							aria-haspopup="true"
+							aria-expanded="false"
+							aria-label="browse"
+						>
+							Browse
+							<span class="min-w-[20px]">
+								<Icon name="bx:bxs-chevron-down" />
+							</span>
+						</button>
+						<div id="dropdown1" class="dropdown">
+							<ul role="menu">
+								<li role="menuitem">
+									<a
+										class="dropdown-link"
+										href="/products/calculuslator"
+									>
+										<img
+											src="/public/icons/botd.svg"
+											class="icon"
+										/>
+										<div>
+											<span class="dropdown-link-title"
+												>Calculuslator</span
+											>
+											<p>A calculator for calculus</p>
+										</div>
+									</a>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link"
+										href="/products/payway"
+									>
+										<img
+											src="/public/icons/fs.svg"
+											class="icon"
+										/>
+										<div>
+											<span class="dropdown-link-title"
+												>PayWay</span
+											>
+											<p>Leading payment gateway</p>
+										</div>
+									</a>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link"
+										href="/products/gippity"
+									>
+										<img
+											src="/public/icons/sp.svg"
+											class="icon"
+										/>
+										<div>
+											<span class="dropdown-link-title"
+												>Gippity</span
+											>
+											<p>An open-source LLM</p>
+										</div>
+									</a>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link"
+										href="/products/portfolio-builder"
+									>
+										<img
+											src="/public/icons/cf.svg"
+											class="icon"
+										/>
+										<div>
+											<span class="dropdown-link-title"
+												>Portfolio Builder</span
+											>
+											<p>Build a perfect portfolio</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+
+							<ul role="menu">
+								<li class="dropdown-title">
+									<span class="dropdown-link-title"
+										>Courses</span
+									>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link courses"
+										href="/courses/html-css"
+									>
+										<img src="/public/icons/html.svg" />
+										HTML & CSS
+									</a>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link courses"
+										href="/courses/javascript"
+									>
+										<img
+											src="/public/icons/javascript.svg"
+										/>
+										Javascript
+									</a>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link courses"
+										href="/courses/ui-design"
+									>
+										<img src="/public/icons/figma.svg" />
+										UI Design
+									</a>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link courses"
+										href="/courses/golang-basics"
+									>
+										<img src="/public/icons/go.svg" />
+										Golang Basics
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<button
+							class="nav-link dropdown-btn"
+							data-dropdown="dropdown2"
+							aria-haspopup="true"
+							aria-expanded="false"
+							aria-label="discover"
+						>
+							Discover
+							<span class="min-w-[20px]">
+								<Icon name="bx:bxs-chevron-down" />
+							</span>
+						</button>
+						<div id="dropdown2" class="dropdown">
+							<ul role="menu">
+								<li>
+									<span class="dropdown-link-title"
+										>Services</span
+									>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link"
+										href="/services/appdev"
+										>App Development</a
+									>
+								</li>
+								<li role="menuitem">
+									<a
+										class="dropdown-link"
+										href="/services/webdev"
+										>Web Development</a
+									>
+								</li>
+							</ul>
+							<ul role="menu">
+								<li>
+									<span class="dropdown-link-title"
+										>Download App</span
+									>
+								</li>
+								<li role="menuitem">
+									<a class="dropdown-link" href="#mac-windows"
+										>MacOS & Windows</a
+									>
+								</li>
+								<li role="menuitem">
+									<a class="dropdown-link" href="#linux"
+										>Linux</a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<span class="nav-link">
+							<Link href="/jobs">Jobs</Link>
+						</span>
+					</li>
+					<li>
+						<span class="nav-link">
+							<Link href="/about">About Us</Link>
+						</span>
+					</li>
+					<li>
+						<span class="nav-link">
+							<Link href="/hire-us">Hire Us</Link>
+						</span>
+					</li>
+				</ul>
+			</nav>
+			<button
+				id="hamburger"
+				aria-label="hamburger"
+				aria-haspopup="true"
+				aria-expanded="false"
+			>
+				<img
+					src="/public/icons/menu.svg"
+					class="icon min-w-[45px] ham-image"
+				/>
+			</button>
+		</div>
+	</div>
+</header>
+
+<style scoped>
+	:root {
+		--dark-grey: #333333;
+		--medium-grey: #636363;
+		--light-grey: #eeeeee;
+		--ash: #f4f4f4;
+		--primary-color: #787f65;
+		--white: white;
+		--border: 1px solid var(--light-grey);
+		--shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+			rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	}
+	ul {
+		@apply list-none;
+	}
+	a {
+		@apply no-underline text-inherit;
+	}
+	button {
+		@apply bg-transparent cursor-pointer text-inherit border-[none];
+	}
+	.btn {
+		@apply block bg-[color:var(--primary-color)] text-[color:var(--white)] text-center text-base font-medium px-[1.4rem] py-[0.6rem] rounded-[5px];
+	}
+	.icon {
+		@apply p-2 rounded-[10px];
+	}
+	.logo {
+		@apply mr-6;
+	}
+	#nav-menu {
+		@apply border-b-[length:var(--border)];
+	}
+	.container1 {
+		@apply flex items-center justify-between max-w-[1600px] gap-x-8 h-[90px] mx-auto my-0 px-12 py-[1.2rem];
+	}
+	.menu {
+		@apply relative;
+		background: #e9edc9;
+	}
+	.menu-bar li:first-child .dropdown {
+		@apply min-w-[480px];
+		flex-direction: initial;
+	}
+	.menu-bar li:first-child ul:nth-child(1) {
+		@apply border-r-[length:var(--border)];
+	}
+	.menu-bar li:nth-child(n + 2) ul:nth-child(1) {
+		@apply border-b-[length:var(--border)];
+	}
+	.menu-bar .dropdown-link-title {
+		@apply font-semibold;
+	}
+	.menu-bar .nav-link {
+		@apply text-base font-medium tracking-[-0.6px] min-w-[60px] mx-[0.6rem] my-0 p-[0.3rem];
+	}
+	.menu-bar .nav-link:hover,
+	.dropdown-link:hover {
+		@apply text-[color:var(--primary-color)];
+	}
+	.nav-start,
+	.nav-end,
+	.menu-bar,
+	.right-container,
+	.right-container .search {
+		@apply flex items-center;
+	}
+	.dropdown {
+		@apply flex flex-col min-w-[230px] bg-[white] absolute z-[1] invisible opacity-0 translate-x-[-5px] transition-[0.1s] duration-[ease-in-out] shadow-[var(--shadow)] rounded-[10px] scale-[0.97] top-9;
+	}
+	.dropdown.active {
+		@apply visible opacity-100 translate-x-[5px] scale-100;
+	}
+	.dropdown ul {
+		@apply flex flex-col gap-2 text-[0.95rem] p-[1.2rem];
+	}
+	.dropdown-btn {
+		@apply flex items-center justify-between gap-[0.15rem];
+	}
+	.courses img {
+		@apply w-[30px];
+	}
+	.dropdown-link {
+		@apply flex gap-2 transition-[0.1s] duration-[ease-in-out] px-0 py-2 rounded-[7px];
+	}
+	.dropdown-link p {
+		@apply text-[0.8rem] text-[color:var(--medium-grey)];
+	}
+	.right-container {
+		@apply flex items-center gap-x-4;
+	}
+	.right-container .search {
+		@apply relative;
+	}
+	.right-container img {
+		@apply rounded-[50%];
+	}
+	.search input {
+		@apply bg-[color:var(--ash)] text-base w-full border-[length:var(--border)] pl-[2.4rem] p-[0.7rem] rounded-md border-[none];
+	}
+	.search .bx-search {
+		@apply absolute text-[1.3rem] -translate-y-2/4 opacity-60 left-2.5 top-2/4;
+	}
+	#hamburger {
+		@apply hidden text-[1.9rem] ml-4 p-[0.1rem];
+	}
+	@media (max-width: 800px) {
+		#hamburger {
+			@apply block;
+		}
+		.dropdown {
+			@apply bg-[#e9edc9] hidden min-w-full static visible opacity-100 shadow-none rounded-[5px] border-[none] left-0 top-0;
+		}
+		.container1 {
+			@apply p-[1.2rem];
+		}
+		.menu {
+			@apply hidden absolute min-h-screen w-screen left-0 top-[87px];
+		}
+		.menu-bar li:first-child ul:nth-child(1) {
+			@apply border-b-[length:var(--border)] border-r-[none];
+		}
+		.dropdown {
+			transform: none;
+		}
+		.menu.show,
+		.dropdown.active {
+			@apply block;
+		}
+		.dropdown ul {
+			@apply pl-[0.3rem];
+		}
+		.menu-bar {
+			@apply flex flex-col items-stretch gap-y-4 p-4;
+		}
+		.menu-bar .nav-link {
+			@apply flex justify-between w-full font-semibold text-[1.2rem] m-0;
+		}
+		.menu-bar li:first-child .dropdown {
+			@apply min-w-full;
+		}
+		.menu-bar > li:not(:last-child) {
+			@apply border-b-[length:var(--border)] pb-2;
+		}
+	}
+	@media (max-width: 600px) {
+		.right-container {
+			@apply hidden;
+		}
+	}
+</style>
+
+<script>
+	const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+	const dropdown = document.querySelectorAll(".dropdown");
+	const hamburgerBtn = document.getElementById("hamburger")!;
+	const navMenu = document.querySelector(".menu")!;
+	const links = document.querySelectorAll(".dropdown a");
+	const body = document.querySelector("body")!;
+	const hamMenu = document.querySelector(".ham-image")! as HTMLImageElement;
+
+	function setAriaExpandedFalse() {
+		dropdownBtn.forEach((btn) =>
+			btn.setAttribute("aria-expanded", "false")
+		);
+	}
+
+	function closeDropdownMenu() {
+		dropdown.forEach((drop) => {
+			drop.classList.remove("active");
+			drop.addEventListener("click", (e) => e.stopPropagation());
+		});
+	}
+
+	function toggleHamburger() {
+		navMenu.classList.toggle("show");
+		if (navMenu.classList.contains("show")) {
+			hamMenu.src = "/public/icons/close.svg";
+			body.style.overflow = "hidden";
+		} else {
+			hamMenu.src = "/public/icons/menu.svg";
+			body.style.overflow = "auto";
+		}
+	}
+
+	dropdownBtn.forEach((btn) => {
+		btn.addEventListener("click", function (e) {
+			const dropdownTarget = e.currentTarget!;
+			const dropdownIndex = (dropdownTarget as HTMLElement).dataset
+				.dropdown!;
+			const dropdownElement = document.getElementById(dropdownIndex)!;
+
+			dropdownElement.classList.toggle("active");
+			dropdown.forEach((drop) => {
+				if (drop.id !== (btn as HTMLElement).dataset["dropdown"]) {
+					drop.classList.remove("active");
+				}
+			});
+			e.stopPropagation();
+			btn.setAttribute(
+				"aria-expanded",
+				btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+			);
+		});
+	});
+
+	// close dropdown menu when the dropdown links are clicked
+	links.forEach((link) =>
+		link.addEventListener("click", () => {
+			closeDropdownMenu();
+			setAriaExpandedFalse();
+			toggleHamburger();
+		})
+	);
+
+	// close dropdown menu when you click on the document body
+	document.documentElement.addEventListener("click", () => {
+		closeDropdownMenu();
+		setAriaExpandedFalse();
+	});
+
+	// close dropdown when the escape key is pressed
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") {
+			closeDropdownMenu();
+			setAriaExpandedFalse();
+		}
+	});
+
+	hamburgerBtn.addEventListener("click", toggleHamburger);
+</script>
